@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Acerca de</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Acerca de</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" style="margin-top: 30px;">
+    <ion-card-header>
+      <ion-card-title style="font-size: 18px; text-align: center; font-weight: 600; color: #FFFFFF;">Información de la película</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Título:</p>Sin tiempo para morir</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Dirección:</p>Cary Fukunaga</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Basada en:</p>James Bond de Ian Fleming</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>País:</p>Reino Unido</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Estreno:</p>30/11/2021</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Género:</p>Acción, Aventura, Suspenso</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label style="color: #BCBCBC;"><p>Duración:</p>163 minutos</ion-label>
+      </ion-item>
+      <ion-item id="open-modal" expand="block">
+        <ion-label style="color: #BCBCBC;"><p>Creador:</p>Ian Fleming</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Ian Fleming</ion-title>
+            <ion-buttons slot="end">
+              <ion-button style="color: #BCBCBC;" (click)="modal.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-card>
+            <ion-img src="assets/img/ian.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Ian Lancaster Fleming (Londres, 28 de mayo de 1908-Canterbury, 12 de agosto de 1964) fue un escritor, periodista y oficial de inteligencia británico, conocido por ser el creador de la serie de novelas de espías protagonizadas por James Bond.</ion-card-subtitle>         
+            </ion-card-header>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Personajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Personajes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" style="margin-top: 30px;">
+    <ion-card-header>
+      <ion-card-title style="font-size: 18px; text-align: center; font-weight: 600; color: #FFFFFF;">Actores importantes</ion-card-title>
+    </ion-card-header>
+    <ion-item id="open-modal" expand="block">
+      <ion-label style="color: #BCBCBC;"><p><ion-icon name="star-outline"></ion-icon> Daniel Craig</p>James Bond</ion-label>
+    </ion-item>
+
+    <ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Daniel Craig</ion-title>
+            <ion-buttons slot="end">
+              <ion-button style="color: #BCBCBC;" (click)="modal.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-card>
+            <ion-img src="assets/img/daniel-craig.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-title style="font-size: 16px; text-align: center; font-weight: 600; color: #FFFFFF;">James Bond</ion-card-title>
+              <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Daniel Craig como James Bond, que desde entonces se ha retirado a Jamaica tras los acontecimientos de Spectre.</ion-card-subtitle>         
+            </ion-card-header>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-item id="open-modal2" expand="block">
+      <ion-label style="color: #BCBCBC;"><p><ion-icon name="star-outline"></ion-icon> Rami Malek</p>Lyutsifer Safin</ion-label>
+    </ion-item>
+
+    <ion-modal #modal2 trigger="open-modal2" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Rami Malek</ion-title>
+            <ion-buttons slot="end">
+              <ion-button style="color: #BCBCBC;" (click)="modal2.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-card>
+            <ion-img src="assets/img/rami.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-title style="font-size: 16px; text-align: center; font-weight: 600; color: #FFFFFF;">Lyutsifer Safin</ion-card-title>
+              <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Rami Malek como Lyutsifer Safin, un adversario de James Bond armado con una tecnología peligrosa, que también tiene una conexión con la Dra. Madeleine Swann.</ion-card-subtitle>         
+            </ion-card-header>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-item id="open-modal3" expand="block">
+      <ion-label style="color: #BCBCBC;"><p><ion-icon name="star-outline"></ion-icon> Lashana Lynch</p>Nomi</ion-label>
+    </ion-item>
+
+    <ion-modal #modal3 trigger="open-modal3" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Lashana Lynch</ion-title>
+            <ion-buttons slot="end">
+              <ion-button style="color: #BCBCBC;" (click)="modal3.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-card>
+            <ion-img src="assets/img/lashana.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-title style="font-size: 16px; text-align: center; font-weight: 600; color: #FFFFFF;">Nomi</ion-card-title>
+              <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Lashana Lynch como Nomi, una Agente 00 que ha sido puesta en servicio activo como la 007 actual después de la jubilación de Bond.</ion-card-subtitle>         
+            </ion-card-header>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-item id="open-modal4" expand="block">
+      <ion-label style="color: #BCBCBC;"><p><ion-icon name="star-outline"></ion-icon> Léa Seydoux</p>Madeleine Swann</ion-label>
+    </ion-item>
+    
+    <ion-modal #modal4 trigger="open-modal4" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title style="font-size: 18px;">Léa Seydoux</ion-title>
+            <ion-buttons slot="end">
+              <ion-button style="color: #BCBCBC;" (click)="modal4.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-card>
+            <ion-img src="assets/img/léa.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-title style="font-size: 16px; text-align: center; font-weight: 600; color: #FFFFFF;">Madeleine Swann</ion-card-title>
+              <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Léa Seydoux como Dra. Madeleine Swann, una psiquiatra y el interés amoroso de Bond que le ayudó en su misión en la película Spectre.</ion-card-subtitle>         
+            </ion-card-header>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    
+  </div>
+</ion-content>

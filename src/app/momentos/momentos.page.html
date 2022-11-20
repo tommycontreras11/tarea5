@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Momentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Momentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" style="margin-top: 30px;">
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide>
+            <div class="slide">
+              <img src="assets/img/léa.jpg" width="200" height="200"/>
+              <h2>Infancia de Madeleine</h2>
+              <ion-button fill="clear" id="open-modal" expand="block">Visualizar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+            </div>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="assets/img/daniel-craig.jpg" width="200" height="200" />
+            <h2>Intento de matar a Bond</h2>
+            <ion-button fill="clear" id="open-modal2" expand="block">Visualizar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="assets/img/persecucion.jpg" />
+            <h2>Persecución</h2>
+            <ion-button fill="clear" id="open-modal3" expand="block">Visualizar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          </ion-slide>
+        </ion-slides>
+
+        <ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Detalles</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button style="color: #BCBCBC;" (click)="modal.dismiss()">Close</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-card>
+                <iframe width="100%" height="340" [src]="sanitize(vid)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <ion-card-header>
+                  <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">En esta parte va un asesino a la casa de Madeleine a matarla a ella y a su madre.</ion-card-subtitle>         
+                </ion-card-header>
+              </ion-card>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+        <ion-modal #modal2 trigger="open-modal2" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Detalles</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button style="color: #BCBCBC;" (click)="modal2.dismiss()">Close</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-card>
+                <iframe width="100%" height="340" [src]="sanitize2(vid2)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <ion-card-header>
+                  <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">Antes de esta parte le hacen un atentado a Bond y luego lo persiguen un grupo de malos.</ion-card-subtitle>         
+                </ion-card-header>
+              </ion-card>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+        <ion-modal #modal3 trigger="open-modal3" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Detalles</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button style="color: #BCBCBC;" (click)="modal3.dismiss()">Close</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-card>
+                <iframe width="100%" height="340" [src]="sanitize3(vid3)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <ion-card-header>
+                  <ion-card-subtitle style="font-size: 14px; text-align: justify; font-weight: 500; color: #BCBCBC;">En esta parte persiguen a Bond y Madeleine, como Bond es muy inteligente logra escapar con éxito, al final deja ir a Madeleine ya que con él corre mucho peligro.</ion-card-subtitle>         
+                </ion-card-header>
+              </ion-card>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+  </div>
+</ion-content>
